@@ -1,0 +1,212 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/*Hide nav links except for logo*/
+.topnav #myLinks {
+    display: none;
+}
+
+/*Style nav menu links*/
+.topnav a {
+    color:white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+/*Style hamburger menu*/
+.topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+/*add grey background on mouse over*/
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*style active link
+.active {
+    background-color: #04aa6d;
+    color: white;
+}
+*/
+
+/*styling picture behind title*/
+.container {
+    position: relative;
+    text-align: center;
+    
+}
+
+.container img {
+    width: 100%;
+}
+
+.title {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 8vw;
+    color: black;
+}
+
+.photo-credit {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 2vw;
+}
+
+.photo-credit a {
+    color:#333
+}
+
+/*special formatting for VULNERABILITIES page header*/
+
+#vulnerabilities {
+    position: absolute;
+    top: 30%;
+    left: 27%;
+    color: white;
+}
+
+#vuln {
+    color: white;
+}
+
+#vuln a {
+    color:cornsilk
+}
+
+/*special formatting for IMPACTS page header*/
+
+#impacts {
+    top: 55%;
+    color: white;
+}
+
+#imp {
+    color: white;
+}
+
+#imp a {
+    color:cornsilk;
+}
+
+/*special formatting for CASE STUDIES page header*/
+
+#case-studies {
+    position: absolute;
+    top: 30%;
+    left: 21%;
+}
+
+/*special formatting for ACTION page header*/
+
+#action {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+}
+
+/*styling for homepage sections*/
+
+.sections {
+    margin: 10px 50px;
+}
+
+.sections a {
+    color: black;
+    text-decoration: none;
+}
+
+.sections a:hover {
+    color: grey;
+}
+
+.subsection {
+    border-bottom: 1px solid grey;
+}
+
+/*setting up grid for article formatting*/
+
+.article {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-areas: "side-left main-article side-right";
+}
+
+#side-left {
+    grid-area: side-left;
+}
+
+#side-right {
+    grid-area: side-right;
+}
+
+#main-article {
+    grid-area: main-article;
+    font-size: 4vw;
+}
+
+@media screen and (min-width: 750px){
+    #main-article {
+        grid-area: main-article;
+        font-size: 3vw;
+    }
+
+    .sections {
+        padding: 0px 100px;
+        font-size: 3vw;
+    }
+
+    .sections h1 {
+        font-size: 6vw;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .article {
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    #main-article {
+        grid-area: main-article;
+        font-size: 2vw;
+    }
+
+    .photo-credit {
+        font-size: 1vw;
+    }
+
+    .title {
+        top: 25%;
+    }
+
+    .sections {
+        padding: 0px 325px;
+        font-size: 2vw;
+    }
+
+    .sections h1 {
+        font-size: 4.5vw;
+    }
+}
